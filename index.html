@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Weather Dashboard</h1>
+    <div class="search">
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="e.g. New York, London">
+            <button id="searchBtn">🔍</button>
+        </div>
+        <div class="search-hint">Press Enter or click search</div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <aside id="savedCities">
+            <div class="aside-header">
+                <h3>Saved Cities</h3>
+                <button id="clearCities" title="Clear saved cities">Clear</button>
+            </div>
+            <ul id="citiesList"></ul>
+        </aside>
+
+        <section id="weatherCard" class="hidden">
+            <div class="weather-top">
+                <div>
+                    <h2 id="cityName"></h2>
+                    <div id="description" class="muted"></div>
+                </div>
+                <img id="weatherIcon" src="" alt="icon" class="hidden">
+            </div>
+            <div class="weather-body">
+                <p>Temperature: <span id="temp"></span>°C</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Wind: <span id="wind"></span> m/s</p>
+            </div>
+            <div id="message" class="message"></div>
+            <div id="loader" class="loader hidden" aria-hidden="true"></div>
+            
+            <div id="forecastSection" class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div id="forecastContainer" class="forecast-container"></div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

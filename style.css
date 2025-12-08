@@ -1,0 +1,248 @@
+:root{
+    --bg:#eef6ff;
+    --primary:#2563eb;
+    --muted:#6b7280;
+    --card:#ffffff;
+    --accent:#06b6d4;
+}
+
+*{
+    box-sizing:border-box
+}
+
+body{
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    margin:0;
+    background: linear-gradient(180deg,var(--bg),#f8fbff);
+    color:#0f172a;
+}
+
+header{
+    background:var(--primary);
+    color:white;
+    padding:28px 16px;
+    text-align:center;
+}
+
+.search{
+    margin-top:12px
+}
+
+.search-box{
+    display:inline-flex;
+    align-items:center;
+    background:rgba(255,255,255,0.12);
+    padding:6px;
+    border-radius:999px
+}
+
+.search-box input{
+    border:0;
+    padding:10px 14px;
+    width:260px;
+    border-radius:999px;
+    background:transparent;
+    color:white;
+    outline:none
+}
+
+.search-box button{
+    border:0;
+    background:rgba(255,255,255,0.18);
+    color:white;
+    padding:8px 12px;
+    border-radius:999px;
+    margin-left:8px;
+    cursor:pointer
+}
+
+.search-hint{
+    color:rgba(255,255,255,0.85);
+    font-size:12px;
+    margin-top:8px
+}
+
+main{
+    padding:24px;
+    max-width:980px;
+    margin:0 auto
+}
+
+.container{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    flex-wrap:wrap
+}
+
+aside#savedCities{
+    width:240px
+}
+
+.aside-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px
+}
+
+.aside-header h3{
+    margin:0;
+    font-size:18px
+}
+
+.aside-header button{
+    background:transparent;
+    border:1px solid var(--muted);
+    padding:6px 8px;
+    border-radius:6px;
+    cursor:pointer
+}
+
+#citiesList{
+    list-style:none;
+    padding:0;
+    margin:0
+}
+
+#citiesList li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--card);
+    padding:8px 10px;
+    margin-bottom:8px;
+    border-radius:8px;
+    box-shadow:0 4px 14px rgba(16,24,40,0.04);
+    cursor:pointer
+}
+
+#citiesList li button{
+    border:0;
+    background:transparent;
+    color:var(--muted);
+    cursor:pointer;
+    font-weight:700
+}
+
+section#weatherCard{
+    flex:1;
+    min-width:300px;
+    background:var(--card);
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(2,6,23,0.08)
+}
+
+.weather-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+
+.weather-top h2{
+    margin:0;font-size:22px
+}
+
+.muted{
+    color:var(--muted);
+    font-size:14px
+}
+
+.weather-body{
+    margin-top:16px;
+    display:flex;gap:16px;
+    flex-wrap:wrap
+}
+
+.weather-body p{
+    margin:0;padding:6px 10px;
+    background:#f8fafc;
+    border-radius:8px
+}
+
+.message{
+    margin-top:12px;
+    color:var(--muted);
+    min-height:20px
+}
+
+.loader{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    border:4px solid rgba(0,0,0,0.08);
+    border-top-color:var(--accent);
+    animation:spin .9s linear infinite;
+    margin-top:12px
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg)
+    }
+}
+
+.hidden{
+    display:none
+}
+
+/* Forecast */
+.forecast-section{
+    margin-top:20px;
+    padding-top:16px;
+    border-top:1px solid #e5e7eb
+}
+
+.forecast-section h3{
+    margin:0 0 12px 0;
+    font-size:16px;
+    color:var(--muted)
+}
+
+.forecast-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(90px,1fr));
+    gap:10px
+}
+
+.forecast-day{
+    background:#f8fafc;
+    padding:10px;
+    border-radius:8px;
+    text-align:center;
+    font-size:13px
+}
+
+.forecast-day .date{
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600
+}
+
+.forecast-day .icon{
+    font-size:28px;
+    margin:6px 0
+}
+
+.forecast-day .temp{
+    font-weight:600;
+    margin:4px 0
+}
+
+.forecast-day .desc{
+    color:var(--muted);
+    font-size:11px
+}
+
+@media(max-width:760px){
+    .container{
+        flex-direction:column
+    }
+    aside#savedCities{
+        width:100%
+    }
+    .search-box input{
+        width:160px
+    }
+}
