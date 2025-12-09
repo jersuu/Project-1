@@ -26,6 +26,6 @@ https://jersuu.github.io/Weather-Dashboard/
 
 ## Запуск проекта локально
 ```bash
-git clone https://github.com/jersuu/Project-1.git
-cd Project-1
+git clone https://github.com/jersuu/Weather-Dashboard.git
+cd Weather-Dashboard
 open index.html
