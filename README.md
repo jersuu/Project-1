@@ -15,7 +15,7 @@
 
 ## Демонстрация
 
-https://jersuu.github.io/Project-1/
+[https://jersuu.github.io/Project-1/](https://jersuu.github.io/Weather-Dashboard/)
 
 ## Использовано
 
